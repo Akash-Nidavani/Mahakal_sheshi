@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "install": "^0.13.0",
+    "npm": "^9.8.1",
+    "pg": "^8.11.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.1"
+  },
+  "name": "blogs_sh",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "create-db": "npx sequelize-cli db:create",
+    "create-seed": "npx sequelize-cli seed:generate --name",
+    "seed-all": "npx sequelize-cli db:seed:all",
+    "seed-undo": "npx sequelize-cli db:seed:undo:all",
+    "generate-migration": "npx sequelize-cli migration:generate --name",
+    "migrate": "npx sequelize-cli db:migrate",
+    "undo-migrate": "npx sequelize-cli db:migrate:undo --name",
+    "undo-migrate-all": "npx sequelize-cli db:migrate:undo:all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akash-Nidavani/Mahakal_sheshi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akash-Nidavani/Mahakal_sheshi/issues"
+  },
+  "homepage": "https://github.com/Akash-Nidavani/Mahakal_sheshi#readme",
+  "description": ""
+}
