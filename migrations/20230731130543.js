@@ -27,7 +27,7 @@ module.exports = {
         unique:true,
       },
       bio:{
-        type:DataTypes.STRING,
+        type:DataTypes.TEXT,
         allowNull:false,
       },
       createdAt: {
@@ -47,7 +47,7 @@ module.exports = {
         primaryKey: true,
       },
       title:{
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
       category:{
@@ -55,7 +55,7 @@ module.exports = {
         allowNull: false,
       },
       short_description:{
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull:false,
       },
       tags: {
@@ -63,7 +63,7 @@ module.exports = {
         allowNull: false,
       },
       content:{
-        type:DataTypes.STRING,
+        type:DataTypes.TEXT,
         allowNull:false,
       },
       authorId:{

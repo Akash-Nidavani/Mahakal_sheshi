@@ -2,8 +2,8 @@
 // const {Author} = require("../models/index");
 const db = require("./../models");
 
-const createAuthor = async(req, res) => {
-    console.log(req.body)
+const createAuthor = async (req,res) => {
+  console.log(req.body);
   try {
     const { firstName, lastName, email, phoneNumber, bio } = req.body;
     const author = await db.author.create({
@@ -15,7 +15,7 @@ const createAuthor = async(req, res) => {
     });
     res.status(200).json(author);
   } catch (error) {
-    console.log(error)
+    console.log(error);
     res.status(500).json({ error });
   }
 };

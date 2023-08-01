@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require("cors");
+
 const {sequelize} = require("./models/index")
 const authorRoutes = require("./routes/authorRoutes")
 const BlogRoutes = require("./routes/blogRoutes")
