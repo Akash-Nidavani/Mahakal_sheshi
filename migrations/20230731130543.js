@@ -30,6 +30,10 @@ module.exports = {
         type:DataTypes.TEXT,
         allowNull:false,
       },
+      image:{
+        type:DataTypes.STRING,
+        allowNull:true
+      },
       createdAt: {
         allowNull: false,
         type: DataTypes.DATE
@@ -65,6 +69,10 @@ module.exports = {
       content:{
         type:DataTypes.TEXT,
         allowNull:false,
+      },
+      image:{
+        type:DataTypes.STRING,
+        allowNull:true
       },
       authorId:{
         type:DataTypes.INTEGER,

@@ -1,3 +1,3 @@
 imageType: DataTypes.STRING,
-  imageName: DataTypes.STRING,
-  imageData: DataTypes.BLOB('long')
+imageName: DataTypes.STRING,
+imageData: DataTypes.BLOB('long')

@@ -1,22 +1,26 @@
-// controllers/UserController.js
-// const {Author} = require("../models/index");
 const db = require("./../models");
 
 const createAuthor = async (req,res) => {
   console.log(req.body);
   try {
     const { firstName, lastName, email, phoneNumber, bio } = req.body;
+
+    if(!req.file){
+        return res.status(400).json({error:"Profile picture needs to uploaded"})
+    }
+    const image = req.file ? req.file.path : null;
     const author = await db.author.create({
       firstName,
       lastName,
       email,
       phoneNumber,
       bio,
+      image
     });
     res.status(200).json(author);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ error });
+    res.status(500).json({ error :"Failed to create a new author"});
   }
 };
 

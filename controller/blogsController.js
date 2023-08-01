@@ -1,16 +1,20 @@
-// controllers/UserController.js
 const db = require("./../models");
 
 const createBlog = async (req, res) => {
   try {
     const { title, category, tags, short_description, content, authorId } = req.body;
+    if(!req.file){
+        return res.status(400).json({error:"Blog picture needs to be uploaded"})
+    }
+    const image = req.file ? req.file.path : null;
     const blog = await db.blog.create({
         title,
         category,
         tags,
         short_description,
         content,
-        authorId
+        authorId,
+        image
     });
     res.status(200).json(blog);
   } catch (error) {
